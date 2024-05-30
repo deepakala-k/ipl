@@ -214,6 +214,7 @@ bool ipl_is_functional(struct pdbg_target *target)
 
 	// isFuntional bit is stored in 4th byte and bit 3 position in
 	// HWAS_STATE
+	ipl_log(IPL_INFO, "Attribute [ATTR_HWAS_STATE]: %x\n", buf[4]);
 	return (buf[4] & 0x20);
 }
 
